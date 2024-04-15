@@ -66,23 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
   blinkRandomly();
 });
 
-  document.addEventListener("DOMContentLoaded", function() {
-    function fetchDecoration() {
-      fetch("https://decor.fieryflames.dev/api/users/846381470406148116")
-        .then(response => response.json())
-        .then(data => {
-          const decorationHash = data.decorationHash;
-          const decorationURL = `https://ugc.decor.fieryflames.dev/${decorationHash}.png?animate=true`;
-          const decorationImg = document.querySelector('.decoration-effect');
-          decorationImg.src = decorationURL;
-        })
-        .catch(error => {
-          console.error('Erro ao buscar decoração:', error);
-        });
-    }
 
-    fetchDecoration();
-  });
   
 </script>
 <div id="particles-js"></div>
@@ -93,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
               <div class="frame-parent">
                 <div class="foto-perfil-parent">
                   <div class="anima foto-perfil">
-                    <img class="decoration-effect" src="" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 3;">
                     <img class="foto-perfil-child" alt="" 
 src="https://media.discordapp.net/attachments/1223624568489639966/1228884653084119050dfbc96312bb4db9b4e279028ea84adf4.gif" style="position: relative; z-index: 3; border-width: 1px !important; border-color: #fff !important; object-fit: cover; clip-path: circle(50%);"/>
    
